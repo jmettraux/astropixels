@@ -10,7 +10,6 @@ File.open('astropixels_moon_phases.txt', 'wb') do |f|
       puts path
       s = File.read(path).gsub(/\r/, "\n")
       doc = Nokogiri::HTML(s)
-
       doc.css('pre').each do |x|
         #puts x.name
         # Nokogiri::XML::Text
